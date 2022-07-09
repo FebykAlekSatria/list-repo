@@ -17,7 +17,7 @@ export default function CardResume(){
         <div className="rounded-xl shadow-md bg-white-primary p-4 md:p-6 text-sm mb-4 ">
             {isLoading ? <div className="text-center">Loading...</div> :
                 <>
-                    <p className="font-bold text-blue-primary">Indikator OPD</p>
+                    <p className="font-bold text-blue-primary">Resume Repository</p>
                     <div className="flex flex-wrap gap-2 my-2">
                         <button className="flex bg-orange-primary text-white rounded px-2 py-1 gap-1"><MdVisibility className="my-auto"/>{total}</button>
                         <button className="flex bg-orange-primary text-white rounded px-2 py-1 gap-1"><MdVisibilityOff className="my-auto"/>6</button>

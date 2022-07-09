@@ -16,7 +16,7 @@ export default function CardListRepo(){
         <div className="rounded-xl shadow-md bg-white-primary p-4 md:p-6 text-sm">
             {isLoading ? <div className="text-center">Loading...</div> :
                 <>
-                    <p className="font-bold text-blue-primary">List Repositori</p>
+                    <p className="font-bold text-blue-primary">List Repository</p>
                     <table className="table-auto text-sm w-full">
                         <thead>
                             <tr>
