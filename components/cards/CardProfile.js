@@ -24,6 +24,7 @@ export default function CardProfile(){
             <div className="w-2/3 md:w-full gap-2">
               <p className="font-bold mb-2">{user.name}</p>
               <a href={user.blog} className="text-gray-icon text-sm mb-2">{user.blog}</a>
+              <p className="text-blue-primary text-sm mb-2">{user.location}</p>
               {user.html_url &&
                 <Link href={user.html_url} > 
                   <a> 
