@@ -2,8 +2,8 @@
 import { createSlice, createAsyncThunk, createEntityAdapter} from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getData = createAsyncThunk('data/getData', async () => {
-    const response = await axios.get('https://api.github.com/users/FebykAlekSatria/repos');
+export const getUser = createAsyncThunk('data/getData', async () => {
+    const response = await axios.get('https://api.github.com/users/FebykAlekSatria');
     console.log(response.data);
     return response.data;
 });
@@ -14,7 +14,7 @@ export const productEntity = createEntityAdapter(
     }
 )
 
-const data = createSlice({
+const user = createSlice({
     name: "repo",
     initialState: productEntity.getInitialState({
         isLoading: false,
@@ -22,10 +22,10 @@ const data = createSlice({
         data: [],
     }),
     extraReducers: {
-        [getData.pending]: (state, action) => {
+        [getUser.pending]: (state, action) => {
             state.isLoading = true;
         },
-        [getData.fulfilled]: (state, action) => {
+        [getUser.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.data = action.payload;
         }
@@ -34,4 +34,4 @@ const data = createSlice({
 });
 
 export const dataSelector = productEntity.getSelectors(state => state.data);
-export default data.reducer;
+export default user.reducer;
