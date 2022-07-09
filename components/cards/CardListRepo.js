@@ -35,7 +35,7 @@ export default function CardListRepo(){
                                         <td className="border px-4 py-2">{item.visibility}</td>
                                         <td className="border px-4 py-2">
                                             <Link href={item.html_url}>
-                                                <a>
+                                                <a target="_blank">
                                                     <p className="bg-blue-primary rounded-md p-2 font-bold md:mx-auto text-white text-xs text-center">View </p> 
                                                 </a>
                                             </Link>

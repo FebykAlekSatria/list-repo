@@ -25,8 +25,8 @@ export default function CardProfile(){
                 <a href={user.blog} className="text-gray-icon text-sm mb-2">{user.blog}</a>
                 <p className="text-blue-primary text-sm mb-2">{user.location}</p>
                 {user.html_url &&
-                  <Link href={user.html_url} > 
-                    <a> 
+                  <Link href={user.html_url}> 
+                    <a target="_blank"> 
                       <p className="w-1/3 bg-blue-primary rounded-md p-2 px-4 font-bold md:mx-auto my-4 text-white">Github </p> 
                     </a> 
                   </Link>
