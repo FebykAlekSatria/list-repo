@@ -4,7 +4,6 @@ import axios from "axios";
 
 export const getData = createAsyncThunk('data/getData', async () => {
     const response = await axios.get('https://api.github.com/users/FebykAlekSatria/repos');
-    console.log(response.data);
     return response.data;
 });
 
