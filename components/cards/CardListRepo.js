@@ -17,29 +17,28 @@ export default function CardListRepo(){
             {isLoading ? <div className="text-center">Loading...</div> :
                 <>
                     <p className="font-bold text-blue-primary">List Repositori</p>
-                    <table className="table-auto">
+                    <table className="table-auto text-sm w-full">
                         <thead>
                             <tr>
-                                <th className="border px-4 py-2">Name Repo</th>
-                                <th className="border px-4 py-2">Languge</th>
-                                <th className="border px-4 py-2">Status</th>
-                                <th className="border px-4 py-2">Visibility</th>
+                                <th className="border w-1/3 py-2">Name Repo</th>
+                                <th className="border px-1 py-2">Languge</th>
+                                <th className="border px-1 py-2">Status</th>
+                                <th className="border px-1 py-2">Visibility</th>
                             </tr>
                         </thead>
                         <tbody>
                             {data.map((item, index) => {
                                 return(
                                     <tr key={index} className="text-gray-icon">
-                                        <td className="border px-4 py-2">{item.name}</td>
-                                        <td className="border px-4 py-2">{item.language}</td>
-                                        <td className="border px-4 py-2">{item.visibility}</td>
-                                        <td className="border px-4 py-2">
+                                        <td className="border break-all px-1 py-2">{item.name}</td>
+                                        <td className="border px-1 py-2">{item.language}</td>
+                                        <td className="border px-1 py-2">{item.visibility}</td>
+                                        <td className="border px-1 py-2">
                                             <Link href={item.html_url}>
                                                 <a target="_blank">
                                                     <p className="bg-blue-primary rounded-md p-2 font-bold md:mx-auto text-white text-xs text-center">View </p> 
                                                 </a>
                                             </Link>
-
                                         </td>
                                     </tr>
                                 )
