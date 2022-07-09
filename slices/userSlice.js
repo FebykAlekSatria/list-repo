@@ -2,9 +2,8 @@
 import { createSlice, createAsyncThunk, createEntityAdapter} from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getUser = createAsyncThunk('data/getData', async () => {
+export const getUser = createAsyncThunk('user/getUser', async () => {
     const response = await axios.get('https://api.github.com/users/FebykAlekSatria');
-    console.log(response.data);
     return response.data;
 });
 
